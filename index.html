@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Vincent Tochi - Socially-conscious storyteller and tech-for-impact builder from Kenya">
+  <title>Vincent Tochi | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --primary-color: #10b981;
+      --primary-dark: #065f46;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --bg-light: #f3f4f6;
+      --bg-dark: #1f2937;
+      --shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      --border-radius: 20px;
+      --transition: all 0.3s ease;
+    }
+
+    html {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9fafb, #e5e7eb);
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: var(--bg-dark);
+        color: var(--bg-light);
+      }
+      
+      .section {
+        background: var(--bg-dark);
+        border: 1px solid #374151;
+      }
+      
+      .project {
+        background: #1f2937;
+      }
+      
+      .hero {
+        background: #111827;
+        color: var(--bg-light);
+      }
+      
+      .footer {
+        background: #111827;
+      }
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: var(--primary-dark);
+      color: white;
+      padding: 1rem;
+      z-index: 100;
+      text-decoration: none;
+    }
+
+    .skip-link:focus {
+      left: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    header.hero {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dark);
+    }
+
+    header.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header.hero p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn, .btn-outline {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary-color);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      background: #ffffff;
+      margin-bottom: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    .project {
+      margin-bottom: 1rem;
+      padding: 1.5rem;
+      background: var(--bg-light);
+      border-left: 5px solid var(--primary-color);
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--primary-color);
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+      color: var(--primary-dark);
+    }
+
+    ul {
+      list-style-position: inside;
+    }
+
+    ul li {
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+  .profile-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.profile-wrapper img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3b82f6;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .profile-wrapper img {
+    width: 80px;
+    height: 80px;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- Profile Picture Centered -->
+<div class="profile-wrapper">
+  <img src="vincent.png" alt="Vincent Tochi Profile Photo">
+</div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Vincent Tochi</h1>
+      <p>Creative strategist | Digital operator | Startup generalist | Tech-for-impact builder</p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="./vincent-resume.pdf" class="btn-outline" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm a passionate and driven learner exploring the intersection of technology, business, and social impact. My background spans roles in operations, social media management, and customer service but my curiosity has led me to dive into tech with the goal of building solutions that empower everyday people, especially in the informal sector.
+I'm a passionate and driven learner exploring the intersection of technology, business, and social impact. My background spans roles in operations, social media management, and customer service but my curiosity has led me to dive into tech with the goal of building solutions that empower everyday people, especially in the informal sector.
+I recently enrolled in this tech academy to gain hands-on skills in software development and digital tools, with the aim of creating scalable products like JuaKazi, a career networking platform for youth and small businesses in Kenya. I'm excited to collaborate, learn, and build innovative solutions that solve real problems.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Featured Projects</h2>
+        <div class="projects-container">
+          <div class="project">
+            <h3>JuaKazi</h3>
+            <p>A career networking platform for Kenya's informal sector. Connecting hustlers to opportunity — because your work is your network.</p>
+            <a href="#" class="project-link" aria-label="Learn more about JuaKazi project">Learn more →</a>
+          </div>
+          <div class="project">
+            <h3>PlanetAuto</h3>
+            <p>Formerly CarPlanet — a growing car resale startup redefining trust and transparency in vehicle sales.</p>
+            <a href="#" class="project-link" aria-label="Learn more about PlanetAuto project">Learn more →</a>
+          </div>
+          <div class="project">
+            <h3>Java House Digital Buzz</h3>
+            <p>Executed local campaigns in Meru, Kisumu, and Nyali, growing footfall and engagement across Java's new branches.</p>
+            <a href="#" class="project-link" aria-label="Learn more about Java House Digital Buzz project">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <ul>
+          <li><strong>Uber</strong> – Operations Associate (2025–Present)</li>
+          <li><strong>Fuzu</strong> – Remote Ops Support (2025)</li>
+          <li><strong>Java House</strong> – Barista & Brand Ambassador (2021–2024)</li>
+          <li><strong>PlanetAuto</strong> – Co-founder & Sales Lead</li>
+          <li><strong>Fremara & Nyumbani</strong> – Sales Consultant (ERP & Real Estate)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills & Tools</h2>
+        <p><strong>Digital:</strong> HTML, CSS, GitHub, Canva, Meta Business Suite, Google Ads</p>
+        <p><strong>Soft:</strong> Sales, Communication, Strategy, Growth Hacking</p>
+        <p><strong>Languages:</strong> Swahili (Native), English (Fluent), German (Beginner)</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:arebavincent01@gmail.com">arebavincent01@gmail.com</a></p>
+        <p>Phone: +254 724 810 994</p>
+        <p><a href="https://www.linkedin.com/in/vtochi" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Vincent Tochi – Powered by passion. Driven by purpose.</p>
+    </div>
+  </footer>
+</body>
+</html>
