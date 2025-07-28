@@ -1,24 +1,44 @@
-# portfolio
-# Vincent Tochi – Portfolio Website
+# Vincent Tochi – Personal Portfolio
 
-Welcome to the official repository of my personal portfolio website!  
-This site showcases my journey, resume, projects, and contact information in a vibrant, modern layout inspired by Gen Z aesthetics and the ChatGPT day theme.
+This is a personal portfolio website built by [Vincent Tochi](https://www.linkedin.com/in/vtochi), designed to showcase his professional background, experience, and projects.
 
-![Screenshot](vincent.jpg)
+## 🔗 Live Preview
 
-## ✨ Features
+🌐 [View Live on GitHub Pages](https://vinceobrian.github.io/vincent-portfolio)
 
-- ⚡ Smooth animations & transitions
-- 🎨 Gen Z-friendly design with gradients, modern fonts, and responsive layout
-- 📱 Fully mobile responsive
-- 📄 Downloadable Resume
-- 🧑‍💻 Projects, skills, and contact sections
+## 📁 Features
 
-## 🚀 Tech Stack
+- Clean and modern UI
+- Responsive design
+- Animated scrolling and smooth transitions
+- Downloadable resume
+- Professionally styled header with image
+- Fully mobile responsive
+
+## 🛠️ Built With
 
 - HTML5
-- CSS3 (with custom animations)
-- GitHub Pages for hosting
+- CSS3 (with transitions and animations)
+- JavaScript (for smooth scrolling and interactivity)
 
-## 📁 Folder Structure
+## 📄 Resume
+
+Click the **Download CV** button on the top to access the resume.
+
+## 📸 Profile Photo
+
+Included in the header with a clean circular design.
+
+## 🚀 Deployment
+
+Deployed using GitHub Pages:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit: Vincent Tochi Portfolio"
+git branch -M main
+git remote add origin https://github.com/vinceobrian/vincent-portfolio.git
+git push -u origin main
+
 
